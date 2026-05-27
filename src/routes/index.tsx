@@ -5,12 +5,14 @@ import {
   TrustBar,
   Problem,
   Protocol,
-  Products,
   CtaBridge,
+  Pricing,
+  BonusSection,
+  Testimonials,
   FAQ,
-  LeadForm,
   Footer,
 } from "@/components/therapy/sections";
+import { ModalProvider } from "@/components/therapy/ModalContext";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -36,16 +38,18 @@ export const Route = createFileRoute("/")({
 function Index() {
   useReveal();
   return (
-    <main className="bg-white text-olive">
-      <Hero />
-      <TrustBar />
-      <Problem />
-      <Protocol />
-      <Products />
-      <CtaBridge />
-      <FAQ />
-      <LeadForm />
-      <Footer />
-    </main>
+    <ModalProvider>
+      <main className="bg-white text-olive">
+        <Hero />
+        <TrustBar />
+        <Problem />
+        <Pricing />
+        <Protocol />
+        <BonusSection />
+        <Testimonials />
+        <FAQ />
+        <Footer />
+      </main>
+    </ModalProvider>
   );
 }

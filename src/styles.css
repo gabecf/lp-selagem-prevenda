@@ -2,7 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,9 +40,11 @@
   --color-champagne-dark: var(--champagne-dark);
   --color-olive: var(--olive);
 
-  --font-display: "Cormorant Garamond", serif;
+  --font-display: "DM Sans", sans-serif;
   --font-sans: "DM Sans", sans-serif;
-  --font-script: "Dancing Script", cursive;
+  --font-script: "DM Sans", sans-serif;
+
+  --color-heading: #3D3530;
 
   --animate-fade-in: fade-in 0.8s ease-out forwards;
   --animate-gold-pulse: gold-pulse 2.4s ease-in-out infinite;
@@ -65,7 +67,7 @@
   --gold-light: oklch(0.86 0.075 85);      /* #E8D5A3 */
   --champagne: oklch(0.965 0.018 85);      /* #F6F1E4 */
   --champagne-dark: oklch(0.93 0.022 85);  /* #EDE5D0 */
-  --olive: oklch(0.66 0.045 110);          /* #9BA17B */
+  --olive: #7A6E65;
   --white-pure: oklch(1 0 0);
 
   /* Semantic mapping — NO BLACK */
@@ -107,9 +109,9 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    color: var(--color-gold);
-    font-weight: 500;
+    font-family: var(--font-sans);
+    color: var(--color-heading);
+    font-weight: 600;
     letter-spacing: -0.01em;
   }
 }
@@ -120,6 +122,7 @@
   .font-script { font-family: var(--font-script); }
 
   .text-gold { color: var(--color-gold); }
+  .text-heading { color: var(--color-heading); }
   .text-olive { color: var(--color-olive); }
   .text-gold-light { color: var(--color-gold-light); }
   .bg-gold { background-color: var(--color-gold); }
@@ -148,6 +151,26 @@
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .cta-btn {
+      text-align: center;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%) !important;
+    }
+
+    .hero-headline {
+      color: #FFFFFF !important;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .hero-subheadline {
+      color: #FFFFFF !important;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
   }
 
   .label-eyebrow {
