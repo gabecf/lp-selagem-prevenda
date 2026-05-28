@@ -32,7 +32,8 @@ function LeadModal({ onClose }: { onClose: () => void }) {
       phone: phoneFieldValue,
       first_name: nameFieldValue,
     });
-    fetch("https://hook.us2.make.com/kbbsjib42i9nh261h6lq9ri3iu8prytp", {
+    console.log('Submitting form, sending to Make...');
+    fetch("https://hook.us2.make.com/toe18bk5hcvbvx748iujycf8lxfl0dp7", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
