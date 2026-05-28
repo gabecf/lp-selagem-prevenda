@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "deploy": "mv wrangler.toml wrangler.toml.bak && npm run build && mv wrangler.toml.bak wrangler.toml && cp -r images/ dist/client/images/ && npx wrangler deploy"
+    "deploy": "mv wrangler.toml wrangler.toml.bak && npm run build && mv wrangler.toml.bak wrangler.toml && rm -f dist/client/wrangler.json && rm -f .wrangler/deploy/config.json && cp -r images/ dist/client/images/ && npx wrangler deploy --name lp-selagem-prevenda"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
