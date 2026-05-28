@@ -1,0 +1,7 @@
+name = "lp-selagem-prevenda"
+compatibility_date = "2026-05-27"
+compatibility_flags = ["nodejs_compat"]
+main = "dist/server/server.js"
+
+[assets]
+directory = "dist/client"

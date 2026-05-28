@@ -24,6 +24,7 @@ export function CTAButton({ children, pulse, size = "md", className, onClick }: 
     <a
       href="#"
       onClick={handleClick}
+      data-gtm="cta-button"
       className={cn(
         "cta-btn inline-flex items-center justify-center rounded-full bg-gold text-white font-medium tracking-wide",
         "transition-all duration-300 hover:brightness-105 hover:-translate-y-0.5",
